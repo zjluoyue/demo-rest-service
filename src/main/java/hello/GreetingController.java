@@ -21,9 +21,11 @@ public class GreetingController {
      * GET请求
      * url可添加参数
      * url + "?name=*"
+     * 添加局部的跨域请求允许
      * @param name
      * @return
      */
+    @CrossOrigin(origins = "*")
     @GetMapping("")
     public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
 
